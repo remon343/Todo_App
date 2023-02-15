@@ -1,13 +1,31 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.body{
+    @apply bg-[url("https://images.pexels.com/photos/2736497/pexels-photo-2736497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")] bg-cover bg-center text-black h-screen flex justify-center items-center
+}
+.card-body{
+    @apply bg-gradient-to-r from-green-300 to-green-500 border rounded-lg py-4
+}
+.image{
+    @apply w-10 h-10 border rounded-full
+}
+.heading{
+    @apply flex flex-col items-center text-2xl font-serif py-3 
+}
+.input{
+    @apply h-12 px-3 py-3 my-3 ml-3 border rounded-l-lg outline-none text-lg 
+}
+.plus{
+    @apply h-12 text-2xl mr-3 -ml-6 bg-gray-400 flex justify-center items-center w-12 rounded-r-lg  z-30 text-black my-3 border border-black hover:bg-white hover:text-gray-500
+}
+.todo{
+    @apply flex flex-col mb-4 overflow-scroll font-["cursive"] text-2xl max-h-48  
+}
+.todos{
+    @apply my-2 flex justify-between bg-black mx-3 px-3 py-2 rounded-lg text-white
+}
+.button{
+    @apply bg-blue-500 py-4 px-3 flex justify-center mx-4 border rounded-lg border-blue-500 hover:bg-white hover:text-blue-500 text-lg
 }
